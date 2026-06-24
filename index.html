@@ -1884,7 +1884,15 @@ Siti Nurhaliza&#44; S.Kep,198501122005012010,Perawat Pelaksana,ICU</div>
 
 <script>
 
-const GAS_WEBAPP_URL = 'PASTE_WEBAPP_URL_DISINI';
+<script>
+const API_URL = 'https://script.google.com/macros/s/AKfycbwvpw79Gm8NGjW3EQhLUN3u3E9vIqGjPXb2DPSFF7RrM99963LL-ZvDXHLtusvhri9Fbw/exec';
+const GAS_WEBAPP_URL = API_URL;
+
+async function apiGet(action){
+  const r = await fetch(`${API_URL}?action=${action}`);
+  return await r.json();
+}
+</script>
 
 async function apiGet(action){
   const r = await fetch(`${GAS_WEBAPP_URL}?action=${action}`);
