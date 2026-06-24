@@ -1883,19 +1883,10 @@ Siti Nurhaliza&#44; S.Kep,198501122005012010,Perawat Pelaksana,ICU</div>
 
 
 <script>
-
-<script>
 const API_URL = 'https://script.google.com/macros/s/AKfycbwvpw79Gm8NGjW3EQhLUN3u3E9vIqGjPXb2DPSFF7RrM99963LL-ZvDXHLtusvhri9Fbw/exec';
-const GAS_WEBAPP_URL = API_URL;
 
 async function apiGet(action){
   const r = await fetch(`${API_URL}?action=${action}`);
-  return await r.json();
-}
-</script>
-
-async function apiGet(action){
-  const r = await fetch(`${GAS_WEBAPP_URL}?action=${action}`);
   return await r.json();
 }
 
@@ -2299,8 +2290,6 @@ async function doRegister() {
 // STATE GLOBAL
 // ============================================================
 let currentUser = null;
-// supabase removed const API_URL='https://script.google.com/macros/s/AKfycbxhD9n4Q2OWGQOu_zNTupjjQV5NeFkB-rCtYTlXLo4t3Ouj0RGi0Ykq4uunegM6Hg4GFA/exec';
-  
 
 async function loadPegawaiFromSupabase() {
  const data=await fetch(API_URL+'?action=pegawai').then(r=>r.json());
